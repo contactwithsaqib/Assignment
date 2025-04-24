@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login / Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+            .navbar button {
+                background-color: #fff;
+                color: #4CAF50;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius: 8px;
+            }
+
+                .navbar button:hover {
+                    background-color: #45a049;
+                    color: white;
+                }
+
+        .main-container {
+            display: flex;
+            width: 900px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .form-box {
+            flex: 1;
+            padding: 40px;
+        }
+
+            .form-box:not(:last-child) {
+                border-right: 1px solid #ddd;
+            }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--<div class="navbar">
+        <button onclick="window.location.href='/index.html'">Home</button>
+        <button onclick="window.location.href='/StateDistt.html'">New Customer Registration</button>
+        <button onclick="window.location.href='/CustomerList.html'">List Customers</button>
+    </div>-->
+
+    <div class="main-container">
+       
+        <div class="form-box">
+            <h2>Register</h2>
+            <form id="registerForm" novalidate>
+                <input type="email" id="regEmail" placeholder="Email" required />
+                <input type="password" id="regPassword" placeholder="Password" required />
+                <input type="text" id="domain" placeholder="Domain Name" maxlength="10" required />
+                <div id="regError" class="error"></div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+       
+        <div class="form-box">
+            <h2>Login</h2>
+            <form id="loginForm" novalidate>
+                <input type="email" id="loginEmail" placeholder="Email" required />
+                <input type="password" id="loginPassword" placeholder="Password" required />
+                <div id="loginError" class="error"></div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function hasSpecialChar(password) {
+            return /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        }
+
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value.trim();
+            const domain = document.getElementById('domain').value.trim();
+            const errorDiv = document.getElementById('regError');
+            errorDiv.innerHTML = '';
+
+            let errors = [];
+
+          
+            if (!email.includes('@')) {
+                errors.push("Invalid email format.");
+            }
+
+            
+            if (password.length < 8 || password.length > 20) {
+                errors.push("Password must be between 8 and 20 characters.");
+            }
+            if (!hasSpecialChar(password)) {
+                errors.push("Password must include at least one special character.");
+            }
+
+            // Domain checks
+            if (!/^[a-zA-Z0-9_]+$/.test(domain)) {
+                errors.push("Domain must be alphanumeric or underscore (_).");
+            }
+            if (domain.length > 10) {
+                errors.push("Domain cannot be more than 10 characters.");
+            }
+
+            if (errors.length > 0) {
+                errorDiv.innerHTML = errors.join("<br>");
+                return;
+            }
+
+            
+            const response = await fetch('/api/auth/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password, domainName: domain })
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert('Registered successfully!');
+                document.getElementById('loginEmail').value = email;
+                document.getElementById('loginPassword').value = password;
+            } else {
+                errorDiv.innerHTML = result.message || "Registration failed.";
+            }
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.innerHTML = '';
+
+            if (!email || !password) {
+                errorDiv.innerHTML = "Email and password are required.";
+                return;
+            }
+
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert(result.message || 'Login successful!');
+                window.location.href = "/dashboard.html";
+            } else {
+                errorDiv.innerHTML = result.message || "Login failed.";
+            }
+        });
+    </script>
+
+</body>
+</html>

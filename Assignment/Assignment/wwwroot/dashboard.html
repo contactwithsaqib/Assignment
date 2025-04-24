@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+       
+        .navbar {
+            width: 100%;
+            background-color: #4CAF50;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+           
+            .navbar button {
+                background-color: #fff;
+                color: #4CAF50;
+                padding: 12px 25px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+            }
+
+                
+                .navbar button:hover {
+                    background-color: #45a049;
+                    color: white;
+                }
+
+       
+        .dashboard-container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+           
+            .dashboard-container h1 {
+                font-size: 36px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+      
+        .content-box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+       
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+          
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .card h3 {
+                font-size: 24px;
+                margin-bottom: 15px;
+                color: #4CAF50;
+            }
+
+            .card p {
+                font-size: 16px;
+                color: #777;
+            }
+    </style>
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <button onclick="window.location.href='/index.html'">Home</button>
+        <button onclick="window.location.href='/StateDistt.html'">New Customer Registration</button>
+        <button onclick="window.location.href='/CustomerList.html'">List Customers</button>
+    </div>
+
+   
+    <div class="dashboard-container">
+        <h1>Welcome to the Dashboard!</h1>
+
+     
+        <div class="content-box">
+            <div class="card">
+                <h3>Customer Statistics</h3>
+                <p>View and manage customer statistics and details.</p>
+            </div>
+            <div class="card">
+                <h3>Recent Activity</h3>
+                <p>Check the recent activity and updates regarding customers.</p>
+            </div>
+            <div class="card">
+                <h3>Notifications</h3>
+                <p>Stay updated with the latest system notifications and alerts.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        /* Navbar style */
+        .navbar {
+            background-color: #007BFF;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex; /* Make sure the navbar uses flexbox for alignment */
+            justify-content: center; /* Center the buttons */
+            gap: 10px; /* Space between buttons */
+        }
+
+            .navbar button {
+                background-color: #fff;
+                color: #007BFF;
+                border: 1px solid #007BFF;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+
+                .navbar button:hover {
+                    background-color: #007BFF;
+                    color: white;
+                }
+
+        /* Form container */
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+            form input:focus, form select:focus, form button:focus {
+                border-color: #007BFF;
+                outline: none;
+            }
+
+        button {
+            margin-top: 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 4px;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .loading {
+            color: #007BFF;
+            font-style: italic;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <button onclick="window.location.href='/index.html'">Home</button>
+        <button onclick="window.location.href='/StateDistt.html'">New Customer Registration</button>
+        <button onclick="window.location.href='/CustomerList.html'">List Customers</button>
+    </div>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <h2 style="text-align: center;">Customer Registration</h2>
+        <form id="customerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required pattern="^[A-Za-z\s]+$" maxlength="50" placeholder="Enter your full name">
+
+            <label for="genderId">Gender:</label>
+            <select id="genderId" required>
+                <option value="">-- Select Gender --</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+            </select>
+
+            <label for="stateDropdown">State:</label>
+            <select id="stateDropdown" required>
+                <option value="">-- Select State --</option>
+            </select>
+
+            <label for="districtDropdown">District:</label>
+            <select id="districtDropdown" required disabled>
+                <option value="">-- Select District --</option>
+            </select>
+
+            <button type="submit">Save</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+      
+        window.onload = function () {
+            fetchStates();
+        };
+
+        
+        function fetchStates() {
+            document.getElementById('message').innerHTML = '<span class="loading">Loading states...</span>';
+            fetch('/api/customer/states')
+                .then(response => response.json())
+                .then(states => {
+                    const stateDropdown = document.getElementById('stateDropdown');
+                    states.forEach(state => {
+                        const option = document.createElement('option');
+                        option.value = state.id; 
+                        option.text = state.stateName; 
+                        stateDropdown.appendChild(option);
+                    });
+                    document.getElementById('message').innerHTML = ''; 
+                })
+                .catch(error => {
+                    console.log('Error fetching states:', error);
+                    document.getElementById('message').innerText = 'Failed to load states.';
+                    document.getElementById('message').style.color = 'red';
+                });
+        }
+
+     
+        document.getElementById('stateDropdown').addEventListener('change', function () {
+            const stateId = this.value;
+            if (stateId) {
+                fetchDistricts(stateId);
+            } else {
+                clearDistricts();
+            }
+        });
+
+        function fetchDistricts(stateId) {
+            document.getElementById('message').innerHTML = '<span class="loading">Loading districts...</span>';
+            fetch(`/api/customer/districts/${stateId}`)
+                .then(response => response.json())
+                .then(districts => {
+                    const districtDropdown = document.getElementById('districtDropdown');
+                    clearDistricts();
+                    districts.forEach(district => {
+                        const option = document.createElement('option');
+                        option.value = district.id;
+                        option.text = district.districtName;
+                        districtDropdown.appendChild(option);
+                    });
+                    districtDropdown.disabled = false;
+                    document.getElementById('message').innerHTML = ''; 
+                })
+                .catch(error => {
+                    console.log('Error fetching districts:', error);
+                    document.getElementById('message').innerText = 'Failed to load districts.';
+                    document.getElementById('message').style.color = 'red';
+                });
+        }
+
+        function clearDistricts() {
+            const districtDropdown = document.getElementById('districtDropdown');
+            districtDropdown.innerHTML = '<option value="">-- Select District --</option>';
+            districtDropdown.disabled = true;
+        }
+
+        document.getElementById('customerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const customerData = {
+                name: document.getElementById('name').value,
+                genderId: parseInt(document.getElementById('genderId').value),
+                stateId: parseInt(document.getElementById('stateDropdown').value),
+                districtId: parseInt(document.getElementById('districtDropdown').value)
+            };
+
+            fetch('/api/customer/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(customerData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        document.getElementById('message').innerText = data.message;
+                        document.getElementById('message').style.color = 'green';
+                    } else {
+                        document.getElementById('message').innerText = 'Failed to save customer data.';
+                        document.getElementById('message').style.color = 'red';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error saving customer:', error);
+                    document.getElementById('message').innerText = 'Error saving customer data.';
+                    document.getElementById('message').style.color = 'red';
+                });
+        });
+    </script>
+</body>
+</html>

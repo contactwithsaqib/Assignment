@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\AddCustomer.html",
+      "PackagePath": "staticwebassets\\AddCustomer.html"
+    },
+    {
+      "Id": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\CustomerList.html",
+      "PackagePath": "staticwebassets\\CustomerList.html"
+    },
+    {
+      "Id": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\EditCustomer.html",
+      "PackagePath": "staticwebassets\\EditCustomer.html"
+    },
+    {
+      "Id": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\StateDistt.html",
+      "PackagePath": "staticwebassets\\StateDistt.html"
+    },
+    {
+      "Id": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\dashboard.html",
+      "PackagePath": "staticwebassets\\dashboard.html"
+    },
+    {
+      "Id": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Assignment.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Assignment.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Assignment.props",
+      "PackagePath": "build\\Assignment.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Assignment.props",
+      "PackagePath": "buildMultiTargeting\\Assignment.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Assignment.props",
+      "PackagePath": "buildTransitive\\Assignment.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

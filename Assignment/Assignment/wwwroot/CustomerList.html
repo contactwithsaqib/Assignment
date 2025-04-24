@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .table-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Customer List</h2>
+
+   
+    <div class="table-container">
+        <table id="customerTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>GenderId</th>
+                    <th>StateId</th>
+                    <th>DistrictId</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchCustomerList();
+        });
+
+      
+        function fetchCustomerList() {
+            fetch('/api/customer/GetAll')
+                .then(response => response.json())
+                .then(customers => {
+                    console.log(customers); 
+                    const tableBody = document.getElementById('customerTable').getElementsByTagName('tbody')[0];
+                    tableBody.innerHTML = ''; 
+
+                    if (Array.isArray(customers)) {
+                        customers.forEach(customer => {
+                            const row = tableBody.insertRow();
+
+                            row.insertCell(0).textContent = customer.name || "N/A";
+                            row.insertCell(1).textContent = customer.genderId || "N/A";
+                            row.insertCell(2).textContent = customer.stateId || "N/A";
+                            row.insertCell(3).textContent = customer.districtId || "N/A";
+
+                           
+                            const updateCell = row.insertCell(4);
+                            const updateBtn = document.createElement('button');
+                            updateBtn.textContent = 'Update';
+                            updateBtn.onclick = function () {
+                                window.location.href = `EditCustomer.html?id=${customer.id}`;
+                            };
+                            updateCell.appendChild(updateBtn);
+
+                           
+                            const deleteCell = row.insertCell(5);
+                            const deleteBtn = document.createElement('button');
+                            deleteBtn.textContent = 'Delete';
+                            deleteBtn.style.backgroundColor = '#e74c3c';
+                            deleteBtn.onclick = function () {
+                                if (confirm(`Are you sure you want to delete ${customer.name}?`)) {
+                                    deleteCustomer(customer.id, row);
+                                }
+                            };
+                            deleteCell.appendChild(deleteBtn);
+                        });
+                    } else {
+                        alert('Data format error. Expected an array of customers.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error occurred while fetching customer data');
+                });
+        }
+
+        function deleteCustomer(id, rowElement) {
+            fetch(`/api/customer/${id}`, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        alert(result.message);
+                        rowElement.remove(); 
+                    } else {
+                        alert(result.message || 'Failed to delete customer.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Delete error:', error);
+                    alert('An error occurred while deleting.');
+                });
+        }
+    </script>
+</body>
+</html>

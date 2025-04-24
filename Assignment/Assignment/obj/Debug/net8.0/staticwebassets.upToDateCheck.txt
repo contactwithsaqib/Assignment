@@ -1,0 +1,6 @@
+wwwroot\AddCustomer.html
+wwwroot\CustomerList.html
+wwwroot\dashboard.html
+wwwroot\EditCustomer.html
+wwwroot\index.html
+wwwroot\StateDistt.html

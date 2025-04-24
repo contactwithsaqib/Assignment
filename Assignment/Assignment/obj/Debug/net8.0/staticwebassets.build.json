@@ -1,0 +1,640 @@
+{
+  "Version": 1,
+  "Hash": "84J+fxmwXAKOH+oNXc8B6a1T7kcm2Kopzxsy5PJLXGU=",
+  "Source": "Assignment",
+  "BasePath": "_content/Assignment",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Assignment\\wwwroot",
+      "Source": "Assignment",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\AddCustomer.html",
+      "SourceId": "Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "RelativePath": "AddCustomer#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c163u83djg",
+      "Integrity": "UK/BQhNaANkMLknTGVEf6pCW1HVRAZOijXrGYyR5egU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AddCustomer.html"
+    },
+    {
+      "Identity": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\CustomerList.html",
+      "SourceId": "Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "RelativePath": "CustomerList#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ut1r9nmnqo",
+      "Integrity": "Asd7xiR34kMCvBtrS09Ny66wpGwDv46z+ksqLVfGZyo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CustomerList.html"
+    },
+    {
+      "Identity": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\dashboard.html",
+      "SourceId": "Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "RelativePath": "dashboard#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nrvjdw09oh",
+      "Integrity": "kxRcigDl25RrclC0kR5K1Z0Ve8vJF560aODc75DzF0E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dashboard.html"
+    },
+    {
+      "Identity": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\EditCustomer.html",
+      "SourceId": "Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "RelativePath": "EditCustomer#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dqxfbltwi5",
+      "Integrity": "hYcnuoeiGRhQZftbLW0nWEd+6wrSmkdvvg55wcPnGL4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EditCustomer.html"
+    },
+    {
+      "Identity": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\index.html",
+      "SourceId": "Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8q6z0s2cwg",
+      "Integrity": "0BysyEoeDURGrKps/6U24Dp2tppEO8PrEnZkRPcLFLQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\StateDistt.html",
+      "SourceId": "Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\",
+      "BasePath": "_content/Assignment",
+      "RelativePath": "StateDistt#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a2ztk3lir9",
+      "Integrity": "wqZRaY6ds+M6Yzt88M9stCqkJtEKf3N4cQYjus7oRS4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StateDistt.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "AddCustomer.c163u83djg.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\AddCustomer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UK/BQhNaANkMLknTGVEf6pCW1HVRAZOijXrGYyR5egU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:38:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c163u83djg"
+        },
+        {
+          "Name": "label",
+          "Value": "AddCustomer.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UK/BQhNaANkMLknTGVEf6pCW1HVRAZOijXrGYyR5egU="
+        }
+      ]
+    },
+    {
+      "Route": "AddCustomer.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\AddCustomer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UK/BQhNaANkMLknTGVEf6pCW1HVRAZOijXrGYyR5egU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:38:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UK/BQhNaANkMLknTGVEf6pCW1HVRAZOijXrGYyR5egU="
+        }
+      ]
+    },
+    {
+      "Route": "CustomerList.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\CustomerList.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Asd7xiR34kMCvBtrS09Ny66wpGwDv46z+ksqLVfGZyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:41:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Asd7xiR34kMCvBtrS09Ny66wpGwDv46z+ksqLVfGZyo="
+        }
+      ]
+    },
+    {
+      "Route": "CustomerList.ut1r9nmnqo.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\CustomerList.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Asd7xiR34kMCvBtrS09Ny66wpGwDv46z+ksqLVfGZyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:41:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ut1r9nmnqo"
+        },
+        {
+          "Name": "label",
+          "Value": "CustomerList.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Asd7xiR34kMCvBtrS09Ny66wpGwDv46z+ksqLVfGZyo="
+        }
+      ]
+    },
+    {
+      "Route": "dashboard.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\dashboard.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3584"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kxRcigDl25RrclC0kR5K1Z0Ve8vJF560aODc75DzF0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 15:56:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kxRcigDl25RrclC0kR5K1Z0Ve8vJF560aODc75DzF0E="
+        }
+      ]
+    },
+    {
+      "Route": "dashboard.nrvjdw09oh.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\dashboard.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3584"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kxRcigDl25RrclC0kR5K1Z0Ve8vJF560aODc75DzF0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 15:56:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nrvjdw09oh"
+        },
+        {
+          "Name": "label",
+          "Value": "dashboard.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kxRcigDl25RrclC0kR5K1Z0Ve8vJF560aODc75DzF0E="
+        }
+      ]
+    },
+    {
+      "Route": "EditCustomer.dqxfbltwi5.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\EditCustomer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hYcnuoeiGRhQZftbLW0nWEd+6wrSmkdvvg55wcPnGL4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:41:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqxfbltwi5"
+        },
+        {
+          "Name": "label",
+          "Value": "EditCustomer.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hYcnuoeiGRhQZftbLW0nWEd+6wrSmkdvvg55wcPnGL4="
+        }
+      ]
+    },
+    {
+      "Route": "EditCustomer.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\EditCustomer.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hYcnuoeiGRhQZftbLW0nWEd+6wrSmkdvvg55wcPnGL4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 11:41:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hYcnuoeiGRhQZftbLW0nWEd+6wrSmkdvvg55wcPnGL4="
+        }
+      ]
+    },
+    {
+      "Route": "index.8q6z0s2cwg.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0BysyEoeDURGrKps/6U24Dp2tppEO8PrEnZkRPcLFLQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 15:40:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8q6z0s2cwg"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0BysyEoeDURGrKps/6U24Dp2tppEO8PrEnZkRPcLFLQ="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0BysyEoeDURGrKps/6U24Dp2tppEO8PrEnZkRPcLFLQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 15:40:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0BysyEoeDURGrKps/6U24Dp2tppEO8PrEnZkRPcLFLQ="
+        }
+      ]
+    },
+    {
+      "Route": "StateDistt.a2ztk3lir9.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\StateDistt.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wqZRaY6ds+M6Yzt88M9stCqkJtEKf3N4cQYjus7oRS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 15:55:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a2ztk3lir9"
+        },
+        {
+          "Name": "label",
+          "Value": "StateDistt.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wqZRaY6ds+M6Yzt88M9stCqkJtEKf3N4cQYjus7oRS4="
+        }
+      ]
+    },
+    {
+      "Route": "StateDistt.html",
+      "AssetFile": "C:\\Users\\mohsi\\OneDrive\\Desktop\\Assignment\\Assignment\\Assignment\\wwwroot\\StateDistt.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wqZRaY6ds+M6Yzt88M9stCqkJtEKf3N4cQYjus7oRS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 15:55:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wqZRaY6ds+M6Yzt88M9stCqkJtEKf3N4cQYjus7oRS4="
+        }
+      ]
+    }
+  ]
+}
